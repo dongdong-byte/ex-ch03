@@ -1,6 +1,6 @@
 package com.example.demo.Service;
 
-import com.example.demo.controller.MyController;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -9,16 +9,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class Myservice {
 
-    private final MyController myController;
+   
 
 
 	
 	private static final Logger Log = LoggerFactory.getLogger(Myservice.class);
 
 
-    Myservice(MyController myController) {
-        this.myController = myController;
-    }
+    
 
 
 
