@@ -46,4 +46,14 @@ public class MyController {
 	public String While() {
 		return myservice.While();
 	}
+	
+	@GetMapping("/List")
+	public String List() {
+		return myservice.List();
+	}
+	@GetMapping("/ArrayList")
+	public String ArrayList() {
+		return myservice.ArrayList();
+	}
+	
 }
