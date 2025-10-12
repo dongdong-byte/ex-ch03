@@ -56,4 +56,64 @@ public class MyController {
 		return myservice.ArrayList();
 	}
 	
+	@GetMapping("/ArrayListAPI")
+	public  String ArrayListAPI() {
+		return myservice.ArrayListAPI();
+		
+		
+	}
+	
+	@GetMapping("/ArrayListFor1")
+	public String ArrayListFor1() {
+		return myservice.ArrayListFor1();
+		
+	}
+	@GetMapping("/ArrayListFor2")
+	public String ArrayListFor2() {
+		return myservice.ArrayListFor2();
+		
+		
+	}
+	@GetMapping("/ArrayListBetterFor")
+	public String ArrayListBetterFor() {
+		return myservice.ArrayListBetterFor();
+		
+		
+	}
+	@GetMapping("/Fiter")
+	public String Fiter() {
+		return myservice.Fiter();
+		
+	}
+	@GetMapping("/Distanct")
+	public String Distanct() {
+		return myservice.Distanct();
+		
+	}
+	@GetMapping("/Map")
+	public String Map() {
+		return myservice.Map();
+		
+	}
+	
+	@GetMapping("/Optional")
+	public String Optional() {
+		return myservice.Optional();
+		
+	}
+	@GetMapping("/NullPointerException1")
+	public String NullPointerException1() {
+		return myservice.NullPointerException1();
+		
+	}
+	@GetMapping("/OptionalEmpty")
+	public String OptionalEmpty() {
+		return myservice.OptionalEmpty();
+		
+	}
+	@GetMapping("/Optional03")
+	public String Optional03() {
+		return myservice.Optional03();
+		
+	}
 }
