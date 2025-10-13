@@ -35,7 +35,7 @@ public class Myservice {
 
 
 	public String sayHello(String hi) {
-		String msg = hi + " -> 그렇다";
+		String msg = hi + " -> 완료";
 		
 		System.out.println(msg);
 		
@@ -161,7 +161,10 @@ result = "void 의 Index는"+voidIndex;
 String msg = "p.78 arrayList 문 결과는 : " + result +" 입니다.";
 		return msg;
 	}
-	
+
+
+
+
 	public String ArrayListAPI() {
 		
 		String result = "";
@@ -348,8 +351,152 @@ for(Integer num : list ) {
 	        }
 	        return sb.toString();
 	}
-	
-	public class Main{
+
+    public String equal() {
+        String result = "";
+        String str1 = new String("is same?");
+        String str2 = new String("is same?");
+        if(str1 == str2) {
+          result = "true";
+        }else {
+
+            result = "false";
+        };
+        String msg = "p.79 동일성비교에서  if를 사용한 결과는" + result + "이다.";
+
+     return msg;
+    }
+
+    public String equal1() {
+
+        String str1 = new String("is same?");
+        String str2 = new String("is same?");
+        boolean result = str1.equals(str2);
+        String msg = "p.79 동등성 비교에서 equal함수를 사용한 결과는" + result + "이다.";
+
+        return msg;
+
+    }
+
+    public String equal2() {
+        String result = "";
+        String str1 = new String("is same?");
+        String str2 = new String("is same?");
+         result = str1.equals(str2) ? "true":"false";
+        String msg = "p.79 동등성비교에서 삼항 연산자를 사용한 결과는" + result + "이다.";
+
+        return msg;
+    }
+
+    public String equal3() {
+
+        String str1 = new String("is same?");
+        String str2 = new String("is same?");
+
+
+        return "p.79 동일성비교에서 위에 식을 한줄로 압축한 결과는" + str1.equals(str2) + "이다." ;
+    }
+
+    public String equa4() {
+        String result = "";
+        String str1 = new String("is same?");
+        String str2 = new String("is same?");
+        result = (str1 == str2) ? "true":"false";
+        String msg = "p.79 동등성비교에서 삼항 연산자를 사용한 결과는" + result + "이다.";
+
+        return msg;
+    }
+
+    public String equa5() {
+
+        String str1 = new String("is same?");
+        String str2 = new String("is same?");
+        boolean result = (str1 == str2);
+        String msg = "p.79 동등성비교에서 boolean를 사용한 결과는" + result + "이다.";
+
+        return msg;
+
+    }
+
+    public String ForEach() {
+
+
+
+        Integer[] intArray = new Integer[]{1,2,3,4,5};
+        List<Integer> list = Arrays.asList(intArray);
+        StringBuilder  sb = new StringBuilder();
+        for(Integer number : list){
+            sb.append(number);
+        }
+
+        return sb.toString();
+
+    }
+
+    public String StreamAPI() {
+        Integer [ ] intArray = new Integer[]{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+        List<Integer> list = Arrays.asList(intArray);
+        List<Integer> evenlist = list.stream()
+                .filter(value -> value %2 ==0).collect(Collectors.toList());
+        StringBuilder sb = new StringBuilder();
+        for (Integer num :evenlist ){
+            sb.append(num);
+
+        }
+
+        return "p.90 스트림 API 결과는" + sb.toString() + "입니다.";
+    }
+
+    public String AntiPattern() {
+        Optional<String> optional = getSomeString12();
+        StringBuilder sb = new StringBuilder();
+        if (optional.isPresent()) {
+            sb.append(optional.get());
+        }
+        return sb.toString();
+
+    }
+
+    private Optional<String> getSomeString12() {
+        return  Optional.ofNullable("public static void");
+    }
+
+
+    public interface Car{
+        public String getColor();
+}
+    public class Sonata implements Car{
+        public Sonata(){
+            Log.info("이건 소나타입니다");
+        }
+       @Override
+        public String getColor() {
+            return "==== 색상 : 빨강=====";
+       }
+    }
+    public class K5 implements Car{
+
+        public K5(){
+            Log.info("이건 k5입니다.");
+        }
+        @Override
+        public String getColor() {
+            return "색상 : 검정";
+        }
+    }
+
+
+    public String Interface() {
+    Car car1 = new Sonata();
+    String str1 = car1.getColor();
+    Car car2 = new K5();
+    String str2 = car2.getColor();
+    String result =  str1+"<br>" + str2 + "<br>"+ "차 2대를 출고하였음";
+    return result;
+    }
+
+
+    public class Main{
         private  static  Optional<String> getsomeString(){
             return Optional.empty();
 //            null을 반환하는것이 아니라 비어있는 Opitional을 반환한다

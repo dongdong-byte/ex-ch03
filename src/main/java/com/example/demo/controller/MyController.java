@@ -14,106 +14,170 @@ public class MyController {
 
 //	자바가 객체를 생성하는 방식 -> 안사용함
 //	Myservice myservice = new Myservice();
-	
-	
- Myservice myservice;
-	public MyController(Myservice myservice) {
-		
-		this.myservice = myservice;
-		
-	}
-	
-	
-	@GetMapping("/")
-	public String getMethodName() {
-		
-		System.out.println("기본화면 실행");
-		return myservice.sayHello("화면이 정상적으로 작동했는가? ");
-	}
-	
-	@GetMapping("/IF")
-	public String IF() {
-		return myservice.IF();
-	}
-	
-	
 
-	@GetMapping("/For")
-	public String For() {
-		return myservice.For();
-	}
-	@GetMapping("/While")
-	public String While() {
-		return myservice.While();
-	}
-	
-	@GetMapping("/List")
-	public String List() {
-		return myservice.List();
-	}
-	@GetMapping("/ArrayList")
-	public String ArrayList() {
-		return myservice.ArrayList();
-	}
-	
-	@GetMapping("/ArrayListAPI")
-	public  String ArrayListAPI() {
-		return myservice.ArrayListAPI();
-		
-		
-	}
-	
-	@GetMapping("/ArrayListFor1")
-	public String ArrayListFor1() {
-		return myservice.ArrayListFor1();
-		
-	}
-	@GetMapping("/ArrayListFor2")
-	public String ArrayListFor2() {
-		return myservice.ArrayListFor2();
-		
-		
-	}
-	@GetMapping("/ArrayListBetterFor")
-	public String ArrayListBetterFor() {
-		return myservice.ArrayListBetterFor();
-		
-		
-	}
-	@GetMapping("/Fiter")
-	public String Fiter() {
-		return myservice.Fiter();
-		
-	}
-	@GetMapping("/Distanct")
-	public String Distanct() {
-		return myservice.Distanct();
-		
-	}
-	@GetMapping("/Map")
-	public String Map() {
-		return myservice.Map();
-		
-	}
-	
-	@GetMapping("/Optional")
-	public String Optional() {
-		return myservice.Optional();
-		
-	}
-	@GetMapping("/NullPointerException1")
-	public String NullPointerException1() {
-		return myservice.NullPointerException1();
-		
-	}
-	@GetMapping("/OptionalEmpty")
-	public String OptionalEmpty() {
-		return myservice.OptionalEmpty();
-		
-	}
-	@GetMapping("/Optional03")
-	public String Optional03() {
-		return myservice.Optional03();
-		
-	}
+
+    Myservice myservice;
+
+    public MyController(Myservice myservice) {
+
+        this.myservice = myservice;
+
+    }
+
+
+    @GetMapping("/")
+    public String getMethodName() {
+
+        System.out.println("기본화면 실행");
+        return myservice.sayHello("chapter03 실무에서쓰이는 자바문법 ");
+    }
+
+    @GetMapping("/ex321")
+    public String ex321() {
+        return myservice.IF();
+    }
+
+
+    @GetMapping("/ex322")
+    public String ex322() {
+        return myservice.For();
+    }
+
+    @GetMapping("/ex323")
+    public String ex323() {
+        return myservice.While();
+    }
+
+    @GetMapping("/ex324")
+    public String ex324() {
+        return myservice.Interface();
+    }
+
+    @GetMapping("/ex325")
+    public String ex325() {
+        return myservice.List();
+    }
+
+    @GetMapping("/ex326")
+    public String ex326() {
+        return myservice.ArrayList();
+    }
+
+    @GetMapping("/ex327")
+    public String ex327() {
+        return myservice.equal();
+    }
+
+    @GetMapping("/ex3271")
+    public String ex3271() {
+        return myservice.equa4();
+    }
+
+    @GetMapping("/ex3272")
+    public String ex3272() {
+        return myservice.equa5();
+    }
+
+    @GetMapping("/ex328")
+    public String ex328() {
+        return myservice.equal1();
+    }
+
+    @GetMapping("/ex3281")
+    public String ex3281() {
+        return myservice.equal2();
+    }
+
+    @GetMapping("/ex3282")
+    public String ex3282() {
+        return myservice.equal3();
+    }
+
+    @GetMapping("/ex332")
+    public String ex332() {
+        return myservice.ArrayListAPI();
+
+
+    }
+
+    @GetMapping("/ex333")
+    public String ex333() {
+        return myservice.ArrayListFor1();
+
+    }
+
+    @GetMapping("/ex3331")
+    public String ex3331() {
+        return myservice.ArrayListFor2();
+
+
+    }
+
+    @GetMapping("/ex3332")
+    public String ex3332() {
+        return myservice.ArrayListBetterFor();
+
+
+    }
+
+    @GetMapping("/ex334")
+    public String ex334() {
+        return myservice.StreamAPI();
+
+    }
+
+    @GetMapping("/ex336")
+    public String ex336() {
+        return myservice.Fiter();
+
+    }
+
+    @GetMapping("/ex335")
+    public String ex335() {
+        return myservice.ForEach();
+
+    }
+
+    @GetMapping("/ex337")
+    public String ex337() {
+        return myservice.Distanct();
+
+    }
+
+    @GetMapping("/ex338")
+    public String ex338() {
+        return myservice.Map();
+
+    }
+
+    @GetMapping("/ex339")
+    public String ex339() {
+        return myservice.Optional();
+
+    }
+
+    @GetMapping("/ex3310")
+    public String ex3310() {
+        return myservice.NullPointerException1();
+
+    }
+
+    @GetMapping("/ex3311 ")
+    public String ex3311() {
+        return myservice.OptionalEmpty();
+
+    }
+
+    @GetMapping("/ex3312")
+    public String ex3312() {
+        return myservice.Optional03();
+
+    }
+
+    @GetMapping("/ex3314")
+    public String ex3314() {
+        return myservice.AntiPattern();
+
+
+    }
 }
