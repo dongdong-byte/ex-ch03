@@ -1,16 +1,16 @@
-package com.example.demo.controller;
+package com.example.kim.controller.Ch03;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.Service.Myservice;
+import com.example.kim.Service.Myservice;
 
 
 
 
 
 @RestController
-public class MyController {
+public class MyController03 {
 
 //	자바가 객체를 생성하는 방식 -> 안사용함
 //	Myservice myservice = new Myservice();
@@ -18,7 +18,7 @@ public class MyController {
 
     Myservice myservice;
 
-    public MyController(Myservice myservice) {
+    public MyController03(Myservice myservice) {
 
         this.myservice = myservice;
 
