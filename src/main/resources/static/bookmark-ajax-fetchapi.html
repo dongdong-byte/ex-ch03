@@ -1,0 +1,159 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<form onsubmit="return addBookmarkRequest();">
+    <label>즐겨찾기 이름 : </label><input type="text" name="name"><br>
+    <label>즐겨찾기 URL : </label><input type="text" name="url"><br>
+    <input type="submit"><br>
+</form>
+<button onclick="getBookmarkListRequest();">즐겨찾기 목록 가져오기</button>
+<ol id="bookmark-list">
+    <!-- 여기에 즐겨찾기 목록이 나옵니다. -->
+</ol>
+
+<script >
+// <!--  1. XMLHttpRequest 오래된것   -->
+    // function addBookmarkRequest() {
+    //     const name = document.querySelector('input[name=name]').value;
+    //     const url = document.querySelector('input[name=url]').value;
+    //     const requestObject = {name: name, url: url};
+    //     const requestJson = JSON.stringify(requestObject);
+    //
+    //     function onReadyStateChange(event) {
+    //         const currentAjaxRequest = event.currentTarget;
+    //
+    //         if (currentAjaxRequest.readyState === XMLHttpRequest.DONE) {
+    //             if (currentAjaxRequest.status === 200) {
+    //                 alert("즐겨찾기가 등록되었습니다.");
+    //             } else {
+    //                 console.error('request failed');
+    //             }
+    //         }
+    //     }
+    //
+    //     const ajaxRequest = new XMLHttpRequest();
+    //
+    //     ajaxRequest.onreadystatechange = onReadyStateChange;
+    //     ajaxRequest.open('POST', '/bookmark');
+    //     ajaxRequest.setRequestHeader('Content-Type', 'application/json');
+    //     ajaxRequest.send(requestJson);
+    //
+    //     return false;
+    // }
+    //
+    // function getBookmarkListRequest() {
+    //     function onReadyStateChange(event) {
+    //         const currentAjaxRequest = event.currentTarget;
+    //
+    //         if (currentAjaxRequest.readyState === XMLHttpRequest.DONE) {
+    //             if (currentAjaxRequest.status === 200) {
+    //                 const bookmarkListDom = document.querySelector('#bookmark-list');
+    //                 bookmarkListDom.innerHTML = '';
+    //
+    //                 const bookmarks = JSON.parse(currentAjaxRequest.responseText);
+    //                 bookmarks.forEach(bookmark => {
+    //                     const liNode = document.createElement('li');
+    //                     const textNode = document.createTextNode(bookmark.name + ' - ' + bookmark.url);
+    //                     liNode.appendChild(textNode);
+    //                     bookmarkListDom.appendChild(liNode);
+    //                 });
+    //             } else {
+    //                 console.error('request failed');
+    //             }
+    //         }
+    //     }
+    //
+    //     const ajaxRequest = new XMLHttpRequest();
+    //
+    //     ajaxRequest.onreadystatechange = onReadyStateChange;
+    //     ajaxRequest.open('GET', '/bookmarks');
+    //     ajaxRequest.send();
+    // }
+// <!--  2.fetchApI : 현재 사용하는것1-->
+async  function addBookmarkRequest1() {
+    const  name = document.querySelector('input[name=name]').value;
+    const url = document.querySelector('input[name=url]').value;
+    try {
+const response = await fetch('/bookmark',{
+    method : 'POST',
+    headers :{'Content-Type' : 'application/json'},
+    body : JSON.stringify({name : url})
+})
+        if(response.ok){
+            alert("즐겨찾기가 등록되었습니다.")
+        }else {
+            console.error('request failed')
+        }
+
+    }catch (error){
+        console.error('request failed');
+    }
+return false;
+
+}
+async function getBookmarkListRequest() {
+    try {
+        const response = await fetch('/bookmarks');
+
+        if (response.ok) {
+            const bookmarks = await response.json();
+            const bookmarkListDom = document.querySelector('#bookmark-list');
+            bookmarkListDom.innerHTML = '';
+
+            bookmarks.forEach(bookmark => {
+                const liNode = document.createElement('li');
+                const textNode = document.createTextNode(`${bookmark.name} - ${bookmark.url}`);
+                liNode.appendChild(textNode);
+                bookmarkListDom.appendChild(liNode);
+            });
+        } else {
+            console.error('request failed');
+        }
+    } catch (error) {
+        console.error('request failed');
+    }
+}
+// <!--  3.ofetch : 가장 최근버젼-> 실무에서 많이 쓰임-->
+// 이건 script 도 바꾸어야 하므로 노션 참고
+// import { ofetch} from 'https://cdn.jsdelivr.net/npm/ofetch@1/dist/index.mjs';
+// window.addBookmarkRequest = async function(){
+//     const name = document.querySelector('input[name=name]').value;
+//     const url = document.querySelector('input[name=url]').value;
+//     try {
+//         await ofetch('/bookmark',{
+//             method: 'POST',
+//             body:{name ,url}
+//         });
+//         alert("즐겨 찾기가 등록되었습니다!!")
+//     }catch(error){
+//         console.log('error');
+//     }
+//     return false;
+// }
+// window.getBookmarkListRequest = async function(){
+//     try {
+//         const bookmarks =await ofetch('/bookmarks');
+//         const bookmarkListDom = document.querySelector('#bookmark-list');
+//         bookmarkListDom.innerHTML='';
+//
+//         bookmarks.forEach(bookmarks =>{
+//             const liNode = document.createElement('Li');
+//             liNode.textContent = `${bookmarks.name} - ${bookmarks.url}`;
+//             bookmarkListDom.appendChild(liNode);
+//
+//
+//         });
+//
+//     }catch(error){
+//         console.log('error');
+//     }
+//
+// }
+//
+
+
+</script>
+</body>
+</html>

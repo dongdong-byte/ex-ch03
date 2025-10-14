@@ -1,0 +1,66 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+// <!--    구형 : XMLHttpRequest -->
+    // function onReadyStateChange(event) {
+    //     if (ajaxRequest.readyState === XMLHttpRequest.DONE) {
+    //         if (ajaxRequest.status === 200){
+    //             console.log(ajaxRequest.responseText);
+    //         }else{
+    //             console.log('request status failed.');
+    //
+    //         }
+    //     }
+    //
+    // }
+    // const ajaxRequest = new XMLHttpRequest();
+    //
+    // ajaxRequest.onreadystatechange = onReadyStateChange;
+    // ajaxRequest.open('GET','/get-with-no-parameter');
+    // ajaxRequest.send();
+<!--    신형: fetchAPI 학습용-->
+ async function  fetchData(){
+    try {
+        const response = await fetch('/get-with-no-parameter');
+        console.log(response);
+        if(response.ok){
+            const data = await response.text();
+            console.log(data);
+
+        }else {
+            console.log('request status failed.');
+        }
+    }catch(error) {
+        console.log(" 에러가 났음")
+    }
+
+}
+fetchData();
+// <!-- 가장 최신형 : ofetch -> 실무용 -- >
+
+// import {ofetch} from 'https://cdn.jsdelivr.net/npm/ofetch@1/dist/index.mjs';
+// async function fetchData2(){
+//     try {
+//         const data = await ofetch('/get-with-no-parameter')
+//         console.log(data);
+//     }catch(error){
+//         console.log('request status failed.');
+//     }
+//
+// }
+// fetchData2();
+
+</script>
+
+
+</body>
+
+
+
+
+
+</html>
+
