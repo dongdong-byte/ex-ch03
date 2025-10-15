@@ -20,7 +20,7 @@ public class CalculateRequest {
 	public String getOperation() {
 		return operation;
 	}
-	public void setoperation() {
+	public void setoperation(String operation) {
 		this.operation = operation;
 
 	}
