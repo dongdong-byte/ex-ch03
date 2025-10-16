@@ -50,3 +50,5 @@
 2025-10-16T09:57:05.402+09:00  INFO 7296 --- [ex-ch03] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2025-10-16T09:57:05.418+09:00  INFO 7296 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
 2025-10-16T09:57:05.422+09:00  INFO 7296 --- [ex-ch03] [restartedMain] com.example.demo.Application             : Started Application in 0.903 seconds (process running for 1.183)
+2025-10-16T10:01:07.697+09:00  INFO 7296 --- [ex-ch03] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-16T10:01:07.697+09:00  INFO 7296 --- [ex-ch03] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
