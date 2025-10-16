@@ -1,4 +1,4 @@
-package com.example.demo.Service;
+package com.example.demo.Service.Ch03;
 
 
 
@@ -462,10 +462,10 @@ for(Integer num : list ) {
     }
 
 
-    public interface Car{
+    public static interface Car{
         public String getColor();
 }
-    public class Sonata implements Car{
+    public static class Sonata implements Car{
         public Sonata(){
             Log.info("이건 소나타입니다");
         }
@@ -474,7 +474,7 @@ for(Integer num : list ) {
             return "==== 색상 : 빨강=====";
        }
     }
-    public class K5 implements Car{
+    public static class K5 implements Car{
 
         public K5(){
             Log.info("이건 k5입니다.");
@@ -486,7 +486,7 @@ for(Integer num : list ) {
     }
 
 
-    public String Interface() {
+    public static String Interface() {
     Car car1 = new Sonata();
     String str1 = car1.getColor();
     Car car2 = new K5();
