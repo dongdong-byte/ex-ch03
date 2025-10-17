@@ -1,4 +1,4 @@
-package com.example.demo.Service.Day10_15_Calculate;
+package com.example.demo.service.Day10_15_Calculate;
 
 import org.springframework.stereotype.Service;
 

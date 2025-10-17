@@ -3,7 +3,7 @@ package com.example.demo.controller.Ch03;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.Service.Myservice;
+import com.example.demo.service.Ch03.Myservice;
 
 
 

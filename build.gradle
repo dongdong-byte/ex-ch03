@@ -30,3 +30,11 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+// UTF-8 인코딩 설정 추가 ⬇️
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(ProcessResources).configureEach {
+    filteringCharset = 'UTF-8'
+}
