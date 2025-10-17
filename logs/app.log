@@ -1,12 +1,26 @@
-2025-10-15T17:30:19.436+09:00  INFO 9016 --- [ex-ch03] [restartedMain] com.example.demo.Application             : Starting Application using Java 21.0.8 with PID 9016 (D:\s09_SpringBoot\ex-ch03\build\classes\java\main started by YONSAI in D:\s09_SpringBoot\ex-ch03)
-2025-10-15T17:30:19.436+09:00  INFO 9016 --- [ex-ch03] [restartedMain] com.example.demo.Application             : No active profile set, falling back to 1 default profile: "default"
-2025-10-15T17:30:19.460+09:00  INFO 9016 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-15T17:30:19.460+09:00  INFO 9016 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-15T17:30:19.960+09:00  INFO 9016 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
-2025-10-15T17:30:19.969+09:00  INFO 9016 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-15T17:30:19.969+09:00  INFO 9016 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
-2025-10-15T17:30:19.991+09:00  INFO 9016 --- [ex-ch03] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-15T17:30:19.991+09:00  INFO 9016 --- [ex-ch03] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 531 ms
-2025-10-15T17:30:20.188+09:00  INFO 9016 --- [ex-ch03] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-10-15T17:30:20.207+09:00  INFO 9016 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
-2025-10-15T17:30:20.212+09:00  INFO 9016 --- [ex-ch03] [restartedMain] com.example.demo.Application             : Started Application in 1.049 seconds (process running for 1.412)
+2025-10-17T09:45:05.444+09:00  INFO 2252 --- [ex-ch03] [restartedMain] com.example.demo.Application             : Starting Application using Java 21.0.8 with PID 2252 (D:\s09_SpringBoot\ex-ch03\build\classes\java\main started by YONSAI in D:\s09_SpringBoot\ex-ch03)
+2025-10-17T09:45:05.447+09:00  INFO 2252 --- [ex-ch03] [restartedMain] com.example.demo.Application             : No active profile set, falling back to 1 default profile: "default"
+2025-10-17T09:45:05.478+09:00  INFO 2252 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-17T09:45:05.478+09:00  INFO 2252 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-17T09:45:06.067+09:00  INFO 2252 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-10-17T09:45:06.078+09:00  INFO 2252 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-17T09:45:06.078+09:00  INFO 2252 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-17T09:45:06.105+09:00  INFO 2252 --- [ex-ch03] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-17T09:45:06.105+09:00  INFO 2252 --- [ex-ch03] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 626 ms
+2025-10-17T09:45:06.333+09:00  INFO 2252 --- [ex-ch03] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-17T09:45:06.352+09:00  INFO 2252 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-10-17T09:45:06.357+09:00  INFO 2252 --- [ex-ch03] [restartedMain] com.example.demo.Application             : Started Application in 1.246 seconds (process running for 1.703)
+2025-10-17T09:45:34.544+09:00  INFO 2252 --- [ex-ch03] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-17T09:45:34.547+09:00  INFO 2252 --- [ex-ch03] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-17T17:13:56.012+09:00  INFO 11364 --- [ex-ch03] [restartedMain] com.example.demo.Application             : Starting Application using Java 21.0.8 with PID 11364 (D:\s09_SpringBoot\ex-ch03\build\classes\java\main started by YONSAI in D:\s09_SpringBoot\ex-ch03)
+2025-10-17T17:13:56.014+09:00  INFO 11364 --- [ex-ch03] [restartedMain] com.example.demo.Application             : No active profile set, falling back to 1 default profile: "default"
+2025-10-17T17:13:56.038+09:00  INFO 11364 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-17T17:13:56.038+09:00  INFO 11364 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-17T17:13:56.554+09:00  INFO 11364 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-10-17T17:13:56.562+09:00  INFO 11364 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-17T17:13:56.562+09:00  INFO 11364 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-17T17:13:56.586+09:00  INFO 11364 --- [ex-ch03] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-17T17:13:56.586+09:00  INFO 11364 --- [ex-ch03] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 548 ms
+2025-10-17T17:13:56.809+09:00  INFO 11364 --- [ex-ch03] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-17T17:13:56.833+09:00  INFO 11364 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-10-17T17:13:56.838+09:00  INFO 11364 --- [ex-ch03] [restartedMain] com.example.demo.Application             : Started Application in 1.086 seconds (process running for 1.455)
