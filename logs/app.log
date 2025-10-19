@@ -1,0 +1,28 @@
+2025-10-20T00:33:28.137+09:00  INFO 30948 --- [ex-ch03] [restartedMain] com.example.demo.Application             : Starting Application using Java 21.0.8 with PID 30948 (C:\Users\user\Documents\GitHub\ex-ch03\build\classes\java\main started by user in C:\Users\user\Documents\GitHub\ex-ch03)
+2025-10-20T00:33:28.142+09:00  INFO 30948 --- [ex-ch03] [restartedMain] com.example.demo.Application             : No active profile set, falling back to 1 default profile: "default"
+2025-10-20T00:33:28.186+09:00  INFO 30948 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-20T00:33:28.186+09:00  INFO 30948 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-20T00:33:29.010+09:00  INFO 30948 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-10-20T00:33:29.025+09:00  INFO 30948 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-20T00:33:29.025+09:00  INFO 30948 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20T00:33:29.067+09:00  INFO 30948 --- [ex-ch03] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-20T00:33:29.068+09:00  INFO 30948 --- [ex-ch03] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 880 ms
+2025-10-20T00:33:29.400+09:00  INFO 30948 --- [ex-ch03] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-20T00:33:29.430+09:00  INFO 30948 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-10-20T00:33:29.440+09:00  INFO 30948 --- [ex-ch03] [restartedMain] com.example.demo.Application             : Started Application in 1.697 seconds (process running for 2.139)
+2025-10-20T00:37:00.493+09:00  INFO 30948 --- [ex-ch03] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20T00:37:00.496+09:00  INFO 30948 --- [ex-ch03] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-20T00:39:05.006+09:00  INFO 21888 --- [ex-ch03] [restartedMain] com.example.demo.Application             : Starting Application using Java 21.0.8 with PID 21888 (C:\Users\user\Documents\GitHub\ex-ch03\build\classes\java\main started by user in C:\Users\user\Documents\GitHub\ex-ch03)
+2025-10-20T00:39:05.007+09:00  INFO 21888 --- [ex-ch03] [restartedMain] com.example.demo.Application             : No active profile set, falling back to 1 default profile: "default"
+2025-10-20T00:39:05.029+09:00  INFO 21888 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-20T00:39:05.030+09:00  INFO 21888 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-20T00:39:05.484+09:00  INFO 21888 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-10-20T00:39:05.492+09:00  INFO 21888 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-20T00:39:05.492+09:00  INFO 21888 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20T00:39:05.515+09:00  INFO 21888 --- [ex-ch03] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-20T00:39:05.515+09:00  INFO 21888 --- [ex-ch03] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 485 ms
+2025-10-20T00:39:05.724+09:00  INFO 21888 --- [ex-ch03] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-20T00:39:05.741+09:00  INFO 21888 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-10-20T00:39:05.745+09:00  INFO 21888 --- [ex-ch03] [restartedMain] com.example.demo.Application             : Started Application in 0.955 seconds (process running for 1.246)
+2025-10-20T00:39:11.345+09:00  INFO 21888 --- [ex-ch03] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20T00:39:11.348+09:00  INFO 21888 --- [ex-ch03] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
