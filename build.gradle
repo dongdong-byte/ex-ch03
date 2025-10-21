@@ -19,22 +19,53 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+    // Spring Boot Web - REST API 및 웹 애플리케이션 개발
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+
+    // Thymeleaf - 서버사이드 HTML 템플릿 엔진
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    // Mustache - 경량 템플릿 엔진 (Logic-less templates)
     implementation 'org.springframework.boot:spring-boot-starter-mustache'
+
+    // MyBatis - SQL 매핑 프레임워크
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.5'
+
+    // Lombok - 보일러플레이트 코드 자동 생성 (@Getter, @Setter 등)
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // MySQL JDBC 드라이버 - MySQL 데이터베이스 연결
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    // MariaDB JDBC 드라이버 - MariaDB 데이터베이스 연결
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
+    // Spring Boot DevTools - 개발 중 자동 재시작 및 Live Reload
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Spring Boot Test - 단위 테스트 및 통합 테스트 지원
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // MyBatis Test - MyBatis 관련 테스트 지원
+    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.5'
+
+
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
-// UTF-8 인코딩 설정 추가 ⬇️
+// UTF-8 인코딩 통합 설정
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
 
-tasks.withType(ProcessResources).configureEach {
-    filteringCharset = 'UTF-8'
+tasks.withType(Test).configureEach {
+    systemProperty 'file.encoding', 'UTF-8'
+}
+
+tasks.withType(Javadoc).configureEach {
+    options.encoding = 'UTF-8'
 }

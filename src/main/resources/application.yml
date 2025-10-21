@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: ex-ch03
+
+  # 데이터소스 설정
+  datasource:
+    url: jdbc:mariadb://localhost:3306/testdb
+    username: root
+    password: 1234
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  # JPA 설정 (사용하지 않으면 자동설정 비활성화)
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+
+  # 서블릿 인코딩 설정
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+  # JSON 설정
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    time-zone: Asia/Seoul
+
+# 서버 설정
+server:
+  port: 8090
+
+# MyBatis 설정
+mybatis:
+  mapper-locations:
+    - classpath:dat10_20/mapper/**/*.xml
+    - classpath:day10_21/**/*.xml
+  type-aliases-package: kim.domain
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 30
+
+# 로그 설정
+logging:
+  level:
+    root: info
+    kim.service: debug
+    kim.mapper: debug
+  file:
+    name: logs/app.log
+  charset:
+    console: UTF-8
+    file: UTF-8
