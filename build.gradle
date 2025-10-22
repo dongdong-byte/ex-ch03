@@ -19,9 +19,15 @@ repositories {
 }
 
 dependencies {
+    // ================= Spring Boot Core Dependencies =================
+
     // Spring Boot Web - REST API 및 웹 애플리케이션 개발
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
+    // Spring Boot DevTools - 개발 중 자동 재시작 및 Live Reload
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    // ================= Template Engines =================
 
     // Thymeleaf - 서버사이드 HTML 템플릿 엔진
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
@@ -29,28 +35,33 @@ dependencies {
     // Mustache - 경량 템플릿 엔진 (Logic-less templates)
     implementation 'org.springframework.boot:spring-boot-starter-mustache'
 
+    // ================= Database & ORM =================
+
     // MyBatis - SQL 매핑 프레임워크
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.5'
+
+    // MariaDB JDBC 드라이버 - MariaDB 데이터베이스 연결
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
+    // MySQL JDBC 드라이버 - MySQL 데이터베이스 연결 (선택사항)
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    // ================= Utilities =================
 
     // Lombok - 보일러플레이트 코드 자동 생성 (@Getter, @Setter 등)
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
-    // MySQL JDBC 드라이버 - MySQL 데이터베이스 연결
-    runtimeOnly 'com.mysql:mysql-connector-j'
+    // SLF4J Logger - 로깅 라이브러리 (Spring Boot에 포함)
+    // implementation 'org.springframework.boot:spring-boot-starter-logging'
 
-    // MariaDB JDBC 드라이버 - MariaDB 데이터베이스 연결
-    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
-
-    // Spring Boot DevTools - 개발 중 자동 재시작 및 Live Reload
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    // ================= Testing =================
 
     // Spring Boot Test - 단위 테스트 및 통합 테스트 지원
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     // MyBatis Test - MyBatis 관련 테스트 지원
     testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.5'
-
 
 }
 

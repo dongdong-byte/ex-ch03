@@ -34,8 +34,7 @@ server:
 # MyBatis 설정
 mybatis:
   mapper-locations:
-    - classpath:dat10_20/mapper/**/*.xml
-    - classpath:day10_21/**/*.xml
+    - classpath:mapper/**/*.xml
   type-aliases-package: kim.domain
   configuration:
     map-underscore-to-camel-case: true

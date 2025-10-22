@@ -513,3 +513,28 @@ Caused by: org.apache.ibatis.type.TypeException: The alias 'Student' is already 
 2025-10-21T17:12:08.787+09:00  INFO 2360 --- [ex-ch03] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2025-10-21T17:12:08.806+09:00  INFO 2360 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
 2025-10-21T17:12:08.810+09:00  INFO 2360 --- [ex-ch03] [restartedMain] kim.Application                          : Started Application in 1.234 seconds (process running for 1.523)
+2025-10-22T09:40:13.481+09:00  INFO 17804 --- [ex-ch03] [Test worker] kim.ApplicationTests                     : Starting ApplicationTests using Java 21.0.8 with PID 17804 (started by YONSAI in D:\s09_SpringBoot\ex-ch03)
+2025-10-22T09:40:13.482+09:00  INFO 17804 --- [ex-ch03] [Test worker] kim.ApplicationTests                     : No active profile set, falling back to 1 default profile: "default"
+2025-10-22T09:40:13.918+09:00  WARN 17804 --- [ex-ch03] [Test worker] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kim.mapper]' package. Please check your configuration.
+2025-10-22T09:40:14.401+09:00  INFO 17804 --- [ex-ch03] [Test worker] kim.ApplicationTests                     : Started ApplicationTests in 1.143 seconds (process running for 1.944)
+2025-10-22T09:41:40.513+09:00  INFO 18008 --- [ex-ch03] [Test worker] kim.ApplicationTests                     : Starting ApplicationTests using Java 21.0.8 with PID 18008 (started by YONSAI in D:\s09_SpringBoot\ex-ch03)
+2025-10-22T09:41:40.514+09:00  INFO 18008 --- [ex-ch03] [Test worker] kim.ApplicationTests                     : No active profile set, falling back to 1 default profile: "default"
+2025-10-22T09:41:40.939+09:00  WARN 18008 --- [ex-ch03] [Test worker] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kim.mapper]' package. Please check your configuration.
+2025-10-22T09:41:41.439+09:00  INFO 18008 --- [ex-ch03] [Test worker] kim.ApplicationTests                     : Started ApplicationTests in 1.153 seconds (process running for 1.955)
+2025-10-22T09:43:54.032+09:00  INFO 6696 --- [ex-ch03] [Test worker] kim.ApplicationTests                     : Starting ApplicationTests using Java 21.0.8 with PID 6696 (started by YONSAI in D:\s09_SpringBoot\ex-ch03)
+2025-10-22T09:43:54.033+09:00  INFO 6696 --- [ex-ch03] [Test worker] kim.ApplicationTests                     : No active profile set, falling back to 1 default profile: "default"
+2025-10-22T09:43:54.460+09:00  WARN 6696 --- [ex-ch03] [Test worker] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kim]' package. Please check your configuration.
+2025-10-22T09:43:54.941+09:00  INFO 6696 --- [ex-ch03] [Test worker] kim.ApplicationTests                     : Started ApplicationTests in 1.133 seconds (process running for 1.941)
+2025-10-22T09:44:07.490+09:00  INFO 448 --- [ex-ch03] [restartedMain] kim.Application                          : Starting Application using Java 21.0.8 with PID 448 (D:\s09_SpringBoot\ex-ch03\build\classes\java\main started by YONSAI in D:\s09_SpringBoot\ex-ch03)
+2025-10-22T09:44:07.491+09:00  INFO 448 --- [ex-ch03] [restartedMain] kim.Application                          : No active profile set, falling back to 1 default profile: "default"
+2025-10-22T09:44:07.516+09:00  INFO 448 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-22T09:44:07.516+09:00  INFO 448 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-22T09:44:07.939+09:00  WARN 448 --- [ex-ch03] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kim]' package. Please check your configuration.
+2025-10-22T09:44:08.119+09:00  INFO 448 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-10-22T09:44:08.128+09:00  INFO 448 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-22T09:44:08.128+09:00  INFO 448 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-22T09:44:08.155+09:00  INFO 448 --- [ex-ch03] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-22T09:44:08.155+09:00  INFO 448 --- [ex-ch03] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 639 ms
+2025-10-22T09:44:08.466+09:00  INFO 448 --- [ex-ch03] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-22T09:44:08.487+09:00  INFO 448 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-10-22T09:44:08.492+09:00  INFO 448 --- [ex-ch03] [restartedMain] kim.Application                          : Started Application in 1.292 seconds (process running for 1.686)
