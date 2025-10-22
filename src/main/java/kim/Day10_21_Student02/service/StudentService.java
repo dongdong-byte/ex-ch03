@@ -1,118 +1,88 @@
 package kim.service.Day10_21_Student02;
 
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import kim.domain.Day10_21_Student02.Student02;
 import kim.mapper.Day10_21_Student02.StudentMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
+/**
+ * 학생 서비스 (Day10_21)
+ *
+ * 기능:
+ * - 학생 목록 조회
+ * - 학생 상세 조회
+ * - 학생 생성
+ * - 학생 정보 수정
+ * - 학생 삭제
+ *
+ * 특징:
+ * - @Transactional: 모든 메서드에 트랜잭션 적용
+ * - Slf4j 로깅
+ * - MyBatis Mapper를 통한 CRUD 연산
+ */
 @Slf4j
 @Service("studentServiceDay1021")
 @RequiredArgsConstructor
 @Transactional
 public class StudentService {
 
-//     학원 방식=> 기본적인 데이터 추가 방법
-//    public List<Student> getAllStudents(){
-//    롬복이 사용안될때 Dependency Injection-> 전통방식으로 해야함
-//    @Autowired
-//    StudentService studentService;
+	private final StudentMapper studentMapper;
 
-//    Dependency Injection 방법2-> 생성자에 선언
+	/**
+	 * 특정 학생 조회
+	 *
+	 * @param id 학생 ID
+	 * @return 학생 정보
+	 */
+	public Student02 getStudents(Long id) {
+		return studentMapper.findById(id);
+	}
 
+	/**
+	 * 전체 학생 목록 조회
+	 *
+	 * @return 학생 목록
+	 */
+	public List<Student02> getAllStudents() {
+		return studentMapper.findAll();
+	}
 
-//    Dependency Injection 방법3-> 롬복에 사용
-//    @RequiredArgsConstructor
-//    public  class  StudentRestContorller{}
+	/**
+	 * 학생 생성
+	 *
+	 * @param student 학생 정보
+	 */
+	@Transactional
+	public void createStudent(Student02 student) {
+		studentMapper.insert(student);
+		log.info("학생 생성 : Student = {}", student);
+	}
 
+	/**
+	 * 학생 정보 수정
+	 *
+	 * @param student 학생 정보
+	 */
+	@Transactional
+	public void updateStudent(Student02 student) {
+		studentMapper.update(student);
+		log.info("학생 수정 : Student = {}", student);
+	}
 
-//    학원방식
-//        List<Student> students = new ArrayList<>();
-//        students.add(new Student(){{setId(1L);setName("홍길동");}});
-//        students.add(new Student(){{setId(2L);setName("이몽룡");}});
-//        students.add(new Student(){{setId(3L);setName("성춘향");}});
-//
-
-
-// 더 많은 데이터를 한번에 넣는 방법
-//        return Stream.of(
-//                new Student(1L,"홍길동"),
-//                new Student(2L,"이몽룡"),
-//                new Student(3L,"성춘향")
-//
-//
-//
-//        ).toList();
-
-
-//    }
-
-//    ==========================
-//    가변리스트 (수정이 가능)
-
-//    private final List<Student> students = new ArrayList<>();
-//    생성자에서 초기화
-//    방법1
-//    public  StudentService(){
-//        students.add(new Student(1L,"홍길동"));
-//                students.add(new Student(2L,"이몽룡"));
-//                students.add(new Student(3L,"성춘향"));
-//
-//    }
-//    방법2:Arrays.asList()-> 가장 추천
-
-//    쿼리를 가져옴 -> 트랜잭션
-
-    private final StudentMapper studentMapper;
-//    public StudentService() {
-//        students = new ArrayList<>(Arrays.asList(
-//                new Student(1L,"홍길동"),
-//                new Student(2L,"이몽룡"),
-//                new Student(3L,"성충향")
-//
-//
-//        )
-//
-//        );
-//    }
-
-
-//    public List<Student> getAllStudents(){
-//        return students;
-//    }
-public Student02 getStudents(Long id){
-    return studentMapper.findById(id);
-}
-
-    public List<Student02> getAllStudents(){
-
-        return studentMapper.findAll();
-    }
-
-    @Transactional
-    public void createStudent(Student02 student) {
-        studentMapper.insert(student);
-        log.info("학생 생성 : Student = {}", student);
-    }
-    @Transactional
-    public void updateStudent(Student02 student) {
-        studentMapper.update(student);
-        log.info("학생 수정 : Student = {}", student);
-    }
-    @Transactional
-    public void deleteStudent(Long id) {
-        studentMapper.delete(id);
-        log.info("학생 삭제 : ID = {}", id);
-    }
-
-
-//    나중에 추가/ 삭제 메서드를 만들수가 있음
-//public void  addStudent(Student student){
-//    students.add(student);
-//}
+	/**
+	 * 학생 삭제
+	 *
+	 * @param id 학생 ID
+	 */
+	@Transactional
+	public void deleteStudent(Long id) {
+		studentMapper.delete(id);
+		log.info("학생 삭제 : ID = {}", id);
+	}
 
 }

@@ -10,94 +10,81 @@ import org.springframework.web.bind.annotation.RestController;
 
 import kim.request.Day10_17_form.ArticleRequest;
 
+/**
+ * 폼 데이터 처리 컨트롤러
+ *
+ * 기능:
+ * - GET 방식: @RequestParam 사용
+ * - POST 방식: @RequestBody 사용
+ * - @ModelAttribute: Form 데이터 자동 바인딩
+ */
 @RestController
 public class Myform {
-	
-    @GetMapping("/article-get")
-    public String articleget(@RequestParam String id ,@RequestParam String title , @RequestParam String content) {
-		
-//		방법1: 일반적인 방법
-//		String result = " 아이디는  : " + "<br>"+id + "비밀번호는 :" +  "<br>"+title  + "<br>"+ "내용은 : " +content;
-//		return result;
 
-//		방법2: string.format 사용
-//		return String.format("아이디는 : %s , 비밀번호는 : %s,내용은 : %s",
-//				
-//				id,title,content);
-		
-//		방법3: Text Blocks (최신버젼)
-		
-//        return """
-//				=======게시글 정보======
-//				ID : %s
-//				제목 : %s
-//				내용 : %s
-//				""".formatted(id,title,content);
+	/**
+	 * GET 방식 게시글 조회
+	 *
+	 * @param id 게시글 ID
+	 * @param title 제목
+	 * @param content 내용
+	 * @return 게시글 정보
+	 */
+	@GetMapping("/article-get")
+	public String articleget(
+		@RequestParam String id,
+		@RequestParam String title,
+		@RequestParam String content) {
+		return new StringBuilder()
+			.append("아이디는 ").append(id)
+			.append(", 제목은 ").append(title)
+			.append(", 내용은 ").append(content)
+			.toString();
+	}
 
-//        방법 4: StringBuilder ->대용량 데이터용
-return  new StringBuilder()
-        .append("아이디는").append(id)
-        .append(", 제목은").append(title)
-        .append(", 내용은").append(content)
-        .toString();
+	/**
+	 * POST 방식 게시글 생성 (JSON)
+	 *
+	 * @param request 게시글 요청 정보
+	 * @return 게시글 정보
+	 */
+	@PostMapping("/article-post")
+	public String articlepost(@RequestBody ArticleRequest request) {
+		return """
+			아이디는 : %s,
+			제목은 : %s,
+			내용은 : %s
+			""".formatted(request.id(), request.title(), request.content());
+	}
 
+	/**
+	 * POST 방식 게시글 생성 (Form Data)
+	 *
+	 * @param request 게시글 요청 정보
+	 * @return 게시글 정보
+	 */
+	@PostMapping("/article-postman")
+	public String articlepostman(@ModelAttribute ArticleRequest request) {
+		return "아이디는 : %s , 제목은 : %s, 내용은 : %s".formatted(
+			request.id(),
+			request.title(),
+			request.content()
+		);
+	}
 
-    }
-
-    @PostMapping("/article-post")
-    public String articlepost(@RequestBody ArticleRequest request) {
-		
-//		방법1:formatted() 최신 방식
-//        String result= "아이디는 : %s , 비밀번호는 : %s,내용은 : %s".formatted(
-//
-//                request.id(),
-//                request.title(),
-//                request.content()
-//
-//        );
-//       방법2: text block (최신버젼)
-        String result= """
-                아이디는 : %s,
-                비밀번호는 : %s,
-                내용은 : %s
-
-                """.formatted(request.id(),request.title(),request.content());
-
-//방법3 strigbulider 정보를 대량으로 입력할때 좋음
-
-return result;
-    }
-//		방법 
-@PostMapping("/article-postman")
-public String articlepostman(@ModelAttribute ArticleRequest request) {
-			
-//			방법1:formatted() 최신 방식
-    String result = "아이디는 : %s , 비밀번호는 : %s,내용은 : %s".formatted(
-					
-            request.id(),
-            request.title(),
-            request.content()
-					
-    );
-    return result;
-//			방법 
-}
-
-// 화면 테스트 가능 , 포스트맨 데스트 가능
-//	
-@RequestMapping("/article-auto")
-public String articleAuto (ArticleRequest request) {
-
-    String result = "아이디는 : %s , 비밀번호는 : %s,내용은 : %s".formatted(
-					
-            request.id(),
-            request.title(),
-            request.content()
-					
-    );
-    return result;
-
-}
-		
+	/**
+	 * 자동 바인딩을 사용한 게시글 조회
+	 * GET, POST 모두 지원
+	 *
+	 * @param request 게시글 요청 정보
+	 * @return 게시글 정보
+	 */
+	@RequestMapping("/article-auto")
+	public String articleAuto(ArticleRequest request) {
+		return "아이디는 : %s , 제목은 : %s, 내용은 : %s".formatted(
+			request.id(),
+			request.title(),
+			request.content()
+		);
+	}
 
 }
