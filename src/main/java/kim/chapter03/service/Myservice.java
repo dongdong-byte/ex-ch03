@@ -1,4 +1,4 @@
-package kim.service.Ch03;
+package kim.chapter03.service;
 
 
 

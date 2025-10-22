@@ -1,4 +1,4 @@
-package kim.controller.Ch08;
+package kim.chapter08;
 
 
 import org.springframework.http.HttpHeaders;

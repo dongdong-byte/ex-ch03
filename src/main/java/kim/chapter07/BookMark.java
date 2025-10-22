@@ -1,4 +1,4 @@
-package kim.controller.Ch07;
+package kim.chapter07;
 
 public class BookMark {
 
