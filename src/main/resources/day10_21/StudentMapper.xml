@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.kim.student02.mapper.StudentMapper">
-    <select id="findAll" resultType="Student">
+    <select id="findAll" resultType="kim.day10_21_Student02.domain.Student02">
         select * from student order by id desc
     </select>
 
@@ -17,7 +17,7 @@
 
 <!--        (#{name},#{email},#{age});-->
 <!--    </insert>-->
-    <update id="update" parameterType="Student">
+    <update id="update" parameterType="kim.day10_21_Student02.domain.Student02">
         update  student
         set  name= #{name},
         email = #{email},
@@ -28,7 +28,7 @@
 
     </update>
 
-    <delete id="delete" parameterType="Student">
+    <delete id="delete" parameterType="kim.day10_21_Student02.domain.Student02">
         delete from student where id = #{id}
 
     </delete>
