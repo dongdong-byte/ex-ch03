@@ -31,6 +31,7 @@ dependencies {
 
     // MyBatis - SQL 매핑 프레임워크
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.5'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
 
     // Lombok - 보일러플레이트 코드 자동 생성 (@Getter, @Setter 등)
     compileOnly 'org.projectlombok:lombok'

@@ -20,9 +20,9 @@ import kim.day10_20_Student.domain.Student;
 import lombok.RequiredArgsConstructor;
 
 //@RestController-> http요청을 받고 자동으로 json응답을 보내는 컨트롤러
-@RestController//저는 고객센터 직원입니다.
+@RestController("day1020StudentRestController")//저는 고객센터 직원입니다.
 
-@RequestMapping("/api/students")
+@RequestMapping("/api/students-v1")
 //학생관련 주문을 받습니다.-> api/student에 학생 목록 올립니다.
 //@RequiredArgsConstructor-> 생성자를 자동으로 만들어서 Service를 주입
 //@RequiredArgsConstructor-> 롬복을 설치해야지만 사용할수 있는 이노테이션

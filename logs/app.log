@@ -815,3 +815,52 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: Student
 2025-10-22T10:09:03.856+09:00  INFO 14196 --- [ex-ch03] [restartedMain] kim.Application                          : Started Application in 1.473 seconds (process running for 1.855)
 2025-10-22T10:09:18.872+09:00  INFO 14196 --- [ex-ch03] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2025-10-22T10:09:18.874+09:00  INFO 14196 --- [ex-ch03] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-26T23:51:52.930+09:00  INFO 18004 --- [ex-ch03] [restartedMain] kim.Application                          : Starting Application using Java 21.0.8 with PID 18004 (C:\Users\user\Documents\GitHub\ex-ch03\build\classes\java\main started by user in C:\Users\user\Documents\GitHub\ex-ch03)
+2025-10-26T23:51:52.931+09:00  INFO 18004 --- [ex-ch03] [restartedMain] kim.Application                          : No active profile set, falling back to 1 default profile: "default"
+2025-10-26T23:51:52.959+09:00  INFO 18004 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-26T23:51:52.959+09:00  INFO 18004 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-26T23:51:53.029+09:00  WARN 18004 --- [ex-ch03] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [kim.Application]
+2025-10-26T23:51:53.127+09:00 ERROR 18004 --- [ex-ch03] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [kim.Application]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:194) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar:3.5.6]
+	at kim.Application.main(Application.java:15) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.6.jar:3.5.6]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'studentRestController' for bean class [kim.day10_26_CRUD.controller.StudentRestController] conflicts with existing, non-compatible bean definition of same name and class [kim.day10_20_Student.controller.StudentRestController]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:346) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:204) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:172) ~[spring-context-6.2.11.jar:6.2.11]
+	... 16 common frames omitted
+
+2025-10-26T23:56:31.213+09:00  INFO 29340 --- [ex-ch03] [restartedMain] kim.Application                          : Starting Application using Java 21.0.8 with PID 29340 (C:\Users\user\Documents\GitHub\ex-ch03\build\classes\java\main started by user in C:\Users\user\Documents\GitHub\ex-ch03)
+2025-10-26T23:56:31.214+09:00  INFO 29340 --- [ex-ch03] [restartedMain] kim.Application                          : No active profile set, falling back to 1 default profile: "default"
+2025-10-26T23:56:31.234+09:00  INFO 29340 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-26T23:56:31.236+09:00  INFO 29340 --- [ex-ch03] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-26T23:56:31.843+09:00  INFO 29340 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2025-10-26T23:56:31.851+09:00  INFO 29340 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-26T23:56:31.851+09:00  INFO 29340 --- [ex-ch03] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-26T23:56:31.878+09:00  INFO 29340 --- [ex-ch03] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-26T23:56:31.878+09:00  INFO 29340 --- [ex-ch03] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 642 ms
+2025-10-26T23:56:32.349+09:00  INFO 29340 --- [ex-ch03] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-26T23:56:32.366+09:00  INFO 29340 --- [ex-ch03] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path '/'
+2025-10-26T23:56:32.371+09:00  INFO 29340 --- [ex-ch03] [restartedMain] kim.Application                          : Started Application in 1.418 seconds (process running for 1.766)
+2025-10-26T23:56:37.741+09:00  INFO 29340 --- [ex-ch03] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-26T23:56:37.744+09:00  INFO 29340 --- [ex-ch03] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
