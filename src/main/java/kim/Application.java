@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 
 @SpringBootApplication(exclude = {
     HibernateJpaAutoConfiguration.class  // JPA 자동설정 제외 (MyBatis만 사용)
-})
+}, scanBasePackages = "kim")
 
 public class Application {
 
